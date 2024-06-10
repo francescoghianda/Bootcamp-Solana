@@ -110,8 +110,8 @@ const transferTokens = async (connection: Connection, payer: Keypair, mint: Publ
     const connection = new Connection("https://api.devnet.solana.com", "finalized");
 
     // La mintAuthority la uso anche come payer delle transazioni
-    //const mintAuthority = Keypair.fromSecretKey(new Uint8Array(mintAuthorityPK));
-    const mintAuthority = getNewWallet();
+    const mintAuthority = Keypair.fromSecretKey(new Uint8Array(mintAuthorityPK));
+    //const mintAuthority = getNewWallet();
     const walletA = getNewWallet();
     const walletB = getNewWallet();
 
@@ -128,7 +128,6 @@ const transferTokens = async (connection: Connection, payer: Keypair, mint: Publ
     catch (e) {
         console.log("Errore durante l'esecuzione dell'airdrop");
         console.log(e);
-        return;
     }
 
     // Crea un nuovo token

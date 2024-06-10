@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "esame": "ts-node ./esame/esame.ts"
+    "esame": "ts-node ./esame.ts"
   },
   "dependencies": {
     "@metaplex-foundation/mpl-token-metadata": "^3.2.1",
